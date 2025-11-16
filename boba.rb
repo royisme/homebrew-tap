@@ -5,21 +5,21 @@
 class Boba < Formula
   desc "CLI tool for managing multiple AI providers with intelligent routing and cost tracking"
   homepage "https://github.com/royisme/BobaMixer"
-  version "1.0.11"
+  version "1.0.12"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/royisme/BobaMixer/releases/download/v1.0.11/BobaMixer_darwin_amd64_v1.tar.gz"
-      sha256 "573320a61f079daa56ba96ed2b121d6ff6ec558047faf9b26f42d2413ebb7b72"
+      url "https://github.com/royisme/BobaMixer/releases/download/v1.0.12/BobaMixer_darwin_amd64_v1.tar.gz"
+      sha256 "9b3aa93c5a265407e0985be06c0b87ecd0eaca5885a46f4544821cea1349eb33"
 
       def install
         bin.install "boba"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/royisme/BobaMixer/releases/download/v1.0.11/BobaMixer_darwin_arm64_v8.0.tar.gz"
-      sha256 "88f193e7bcff60a05d38e26838f4bc46c84c06177ce955a22567d321aa2f8079"
+      url "https://github.com/royisme/BobaMixer/releases/download/v1.0.12/BobaMixer_darwin_arm64_v8.0.tar.gz"
+      sha256 "60401ee25502a6f832b39754985ccc2a227cde8524ba4e45f41d028a0cff6864"
 
       def install
         bin.install "boba"
@@ -29,15 +29,15 @@ class Boba < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/royisme/BobaMixer/releases/download/v1.0.11/BobaMixer_linux_amd64_v1.tar.gz"
-      sha256 "72ad341d72a4b4c5c4bba6d9e14a0395729ff69c4e951e4b28003d0090aeb67d"
+      url "https://github.com/royisme/BobaMixer/releases/download/v1.0.12/BobaMixer_linux_amd64_v1.tar.gz"
+      sha256 "e72b499105272ec8fc48810497065a0c3fa66cd31ddc794dbb0c6ba3b6e647a2"
       def install
         bin.install "boba"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/royisme/BobaMixer/releases/download/v1.0.11/BobaMixer_linux_arm64_v8.0.tar.gz"
-      sha256 "68d8fb3ceec80c041cf5e9f41d602b2c9ca88943b338640f9c6102f72e815059"
+      url "https://github.com/royisme/BobaMixer/releases/download/v1.0.12/BobaMixer_linux_arm64_v8.0.tar.gz"
+      sha256 "9ceded67aaca27a2c9da26e5fa010fafde3cfd81a632fc3d3b12cede130b5bbd"
       def install
         bin.install "boba"
       end
