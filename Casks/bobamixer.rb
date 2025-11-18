@@ -3,7 +3,7 @@ cask "bobamixer" do
   name "bobamixer"
   desc "CLI tool for managing multiple AI providers with intelligent routing and cost tracking"
   homepage "https://github.com/royisme/BobaMixer"
-  version "2.0.3"
+  version "2.1.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,12 +15,12 @@ cask "bobamixer" do
     on_intel do
       url "https://github.com/royisme/BobaMixer/releases/download/v#{version}/BobaMixer_darwin_amd64.tar.gz",
         verified: "github.com/royisme/BobaMixer"
-      sha256 "bc7abbf37d30dc01c35f202509f26da915d88321b3eea1986c948f8ec7410c74"
+      sha256 "f74809967e6688537dc986d636daf7a0e99613ec7455fd2cc19c1358be22ef02"
     end
     on_arm do
       url "https://github.com/royisme/BobaMixer/releases/download/v#{version}/BobaMixer_darwin_arm64.tar.gz",
         verified: "github.com/royisme/BobaMixer"
-      sha256 "585c0f9f3386878c33d5ba9fd6e4237f18ad0bf815ebcb4bd1b427b9716c26ce"
+      sha256 "7cbf1d3141bf5583976a30b605f708ad33ba499feb4af9ab3c93eb4dd7f9744e"
     end
   end
 
@@ -28,12 +28,12 @@ cask "bobamixer" do
     on_intel do
       url "https://github.com/royisme/BobaMixer/releases/download/v#{version}/BobaMixer_linux_amd64.tar.gz",
         verified: "github.com/royisme/BobaMixer"
-      sha256 "80447aa6a7461f422fec7a4b2714def474b7a6783efb210ca691918ce7be899a"
+      sha256 "1257150b67a69a98c870396789e950c1c891f661da8f37680f16631e65863dcd"
     end
     on_arm do
       url "https://github.com/royisme/BobaMixer/releases/download/v#{version}/BobaMixer_linux_arm64.tar.gz",
         verified: "github.com/royisme/BobaMixer"
-      sha256 "c5b7196bd55b435dec42f8dd8b41b4bcb428df65b7696c3169f3917dd37d6c60"
+      sha256 "52be7d0c523a6c5be2ebb6e80fa1cf611a834e71157b278834196300340cdeb7"
     end
   end
 
