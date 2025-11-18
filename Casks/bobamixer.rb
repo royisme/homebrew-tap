@@ -3,24 +3,24 @@ cask "bobamixer" do
   name "bobamixer"
   desc "CLI tool for managing multiple AI providers with intelligent routing and cost tracking"
   homepage "https://github.com/royisme/BobaMixer"
-  version "2.0.2"
+  version "2.0.3"
 
   livecheck do
     skip "Auto-generated on release."
   end
 
-  binary "boba:bobamixer"
+  binary "boba"
 
   on_macos do
     on_intel do
       url "https://github.com/royisme/BobaMixer/releases/download/v#{version}/BobaMixer_darwin_amd64.tar.gz",
         verified: "github.com/royisme/BobaMixer"
-      sha256 "8a9c9863ae22dd0b62ba9bab9a08ee9fa010cd693445c00e98057db2c879b7d9"
+      sha256 "bc7abbf37d30dc01c35f202509f26da915d88321b3eea1986c948f8ec7410c74"
     end
     on_arm do
       url "https://github.com/royisme/BobaMixer/releases/download/v#{version}/BobaMixer_darwin_arm64.tar.gz",
         verified: "github.com/royisme/BobaMixer"
-      sha256 "6205d5a20059102eea96dd6ec798790587f89eaaef30f21dfa66ca58a3e631fd"
+      sha256 "585c0f9f3386878c33d5ba9fd6e4237f18ad0bf815ebcb4bd1b427b9716c26ce"
     end
   end
 
@@ -28,18 +28,18 @@ cask "bobamixer" do
     on_intel do
       url "https://github.com/royisme/BobaMixer/releases/download/v#{version}/BobaMixer_linux_amd64.tar.gz",
         verified: "github.com/royisme/BobaMixer"
-      sha256 "1dd247b111189ac40e2a567e6a588deed53913f405d146b19c413a2d42b60939"
+      sha256 "80447aa6a7461f422fec7a4b2714def474b7a6783efb210ca691918ce7be899a"
     end
     on_arm do
       url "https://github.com/royisme/BobaMixer/releases/download/v#{version}/BobaMixer_linux_arm64.tar.gz",
         verified: "github.com/royisme/BobaMixer"
-      sha256 "9d700ff936d08a51107c0379608e53eed15e2d2800b239e218a4013d640c7811"
+      sha256 "c5b7196bd55b435dec42f8dd8b41b4bcb428df65b7696c3169f3917dd37d6c60"
     end
   end
 
   postflight do
     if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/bobamixer"]
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/boba"]
     end
   end
 
